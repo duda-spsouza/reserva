@@ -1,0 +1,406 @@
+/*
+  Configurações gerais da página
+
+  obs: a cor do layout atual é #1E90FF
+  para trocar a cor de todo o layout basta
+  dar replace nesta cor por outra.
+*/
+html{     
+  width:100%;
+}
+body{
+  font-family: 'Calibri', sans-serif;
+	background-color: #FFFFFF;
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+  width:100%;
+}
+*{
+    font-family: 'Calibri', sans-serif;
+}
+#content{
+	margin:auto;
+	padding:5px;
+	overflow:auto;
+	background-color: #F0F0F0;
+	width:100%;
+	max-width: 817px
+}
+
+/*
+  Configurações de forms e inputs
+*/
+
+textarea, div[contenteditable="true"]{
+  box-sizing: border-box;
+  margin:0px;
+  border:0px;
+  border-left: 4px solid #b0bec5 ;
+  background:#FFFFFF;
+  padding:2px 4px;
+  width:100%;
+  resize: none;
+  font-size:16px;
+  font-family: 'Calibri', sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline:none;
+}
+
+input[type="text"], input[type="password"], select, input[type="datetime-local"]{
+  box-sizing: border-box;
+  border: 0px;
+  border-left: 4px solid #b0bec5 ;
+  background:#FFFFFF;
+  height:30px;
+  width:100%;
+  font-size:16px;
+  padding:2px 4px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  -moz-appearance:none;
+  -webkit-appearance: none;
+}
+select{
+  background: url('../images/arrow.png') no-repeat right #FFF;
+}
+input[type="radio"], input[type="checkbox"]{
+  margin-top:7px;
+}
+.item{
+  width:100%;
+  padding:5px 5px;  
+  float:left;
+  box-sizing: border-box;
+}
+.button-panel{  
+  float:left;
+  width:100%
+}
+.item label{
+  margin-left:2px;
+  font-size: 13px;
+  font-weight: bold;
+  color:#9C9C9C;
+}
+h2{
+  margin:0px;
+  color:#FFF;
+  padding:4px;
+  background-color: #1E90FF; /*color*/
+}
+.item small{
+  font-size: 11px;
+  margin:10px;
+  font-weight: normal;
+}
+input[type="button"], input[type="submit"], input[type="reset"]{
+  float:left;
+  background-color: #1E90FF; /*color*/
+  border:none;
+  padding:10px 20px;
+  font-size:14px;
+  color:#FFFFFF;
+  margin:5px;
+  margin-bottom:10px;
+}
+input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover{
+  background-color: #1E90FF;/*color*/
+  background-image:url('../images/bg3.png');
+  cursor:pointer;
+}
+
+
+input[type="text"]:optional, input[type="password"]:optional, select:optional, textarea:optional, input[type="datetime-local"]:optional{
+  border-left:4px solid #b0bec5   ;
+}
+
+input[type="text"]:required:valid, input[type="password"]:required:valid, textarea:required:valid, input[type="datetime-local"]:valid, select:valid{
+  border-left:4px solid #a5d6a7;
+}
+
+input[type="text"]:required:invalid, input[type="password"]:required:invalid, select:required:invalid, textarea:required:invalid, input[type="datetime-local"]:invalid{
+  border-left:4px solid #ffab91;
+}
+
+input[type="text"]:focus:invalid, input[type="password"]:focus:invalid, textarea:focus:invalid, select:focus, input[type="datetime-local"]:focus{
+  border-left:4px solid #ffe082;
+}
+
+input[type="text"].teste, input[type="password"].teste, select.teste, textarea.teste, input[type="datetime-local"].teste{
+  border-left:4px solid #AEF723;
+}
+
+.button-panel div{
+  height:20px;
+  width:20px;
+  margin:5px;
+  float:left;
+  margin-top:13px
+}
+
+#opt {
+  width:100%;
+  background-color:#FFF;
+  height:28px;
+  border-bottom: 4px solid #E8E8E8;
+}
+
+#opt img{
+  float:left;
+}
+
+
+/*
+  Configurações da NavBar
+*/
+
+#navMenu,
+#navMenu ul,
+#navMenu li,
+#navMenu a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border: 0;
+  line-height: 1;
+  box-sizing: content-box;
+}
+#navMenu {
+  height: 39px;
+  width: auto;
+}
+#navMenu:after,
+#navMenu ul:after,
+#navMenu.after,
+#navMenu ul.after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#navMenu a {
+  cursor:pointer;
+  color: #999;
+  display: inline-block;
+  font-family: 'Calibri', sans-serif;
+  font-size: 12px;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+#navMenu ul {
+  width: 100%;
+  list-style: none;
+}
+#navMenu > ul, #navMenu > ul > li {
+  float: right;
+}
+#navMenu > ul > li > a {
+  color: #999;
+  font-size: 15px;
+}
+#navMenu > ul > li.active:after, #navMenu > ul > li:hover:after, #navMenu > ul > li.active.after, #navMenu > ul > li:hover.after  {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-left: -10px;
+}
+#navMenu .subMenu {
+  z-index: 1;
+}
+#navMenu .subMenu:hover > ul {
+  display: block;
+}
+#navMenu .subMenu ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+  top: 100%;
+  left: 0;
+}
+#navMenu .subMenu ul li a {
+  filter: none;
+  font-size: 11px;
+  display: block;
+  line-height: 120%;
+  padding: 10px;
+  color: #FFFFFF;
+}
+#navMenu .subMenu ul li.subMenu a:after{
+  content:'►';
+  width:10px;
+  font-size:10px;
+  float:right;
+  font-family: 'Calibri', sans-serif;
+}
+
+#navMenu .subMenu ul li.subMenu ul li a:after{
+  content:'';
+}
+
+#navMenu .subMenu ul li a span{
+  width:10px;
+  font-size:10px;
+  float:right;
+  font-family: 'Calibri', sans-serif;
+}
+#navMenu .subMenu .subMenu:hover > ul {
+  display: block;
+}
+#navMenu .subMenu .subMenu ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+#navMenu > ul > li.active > a,  #navMenu > ul > li:hover > a {
+  background-image:url('../images/bg1.png');
+}
+#navMenu > ul > li.active:after, #navMenu > ul > li:hover:after, #navMenu > ul > li.active.after, #navMenu > ul > li:hover.after{
+  border-bottom: 10px solid #1E90FF;/*color*/
+}
+#navMenu {
+  border-bottom: 2px solid #1E90FF;/*color*/
+}
+#navMenu .subMenu ul li a {
+  background-image:none;
+  background-color: #1E90FF;/*color*/
+}
+#navMenu .subMenu ul li:hover a, #navMenu .subMenu ul li.active > a {
+  background-color: #1E90FF;/*color*/
+  background-image:url('../images/bg2.png');
+}
+#navMenu .subMenu .subMenu ul li a {
+  background-color: #1E90FF;/*color*/
+  background-image:url('../images/bg2.png');
+}
+#navMenu .subMenu .subMenu ul li a:hover, #navMenu .subMenu .subMenu ul li.active > a {
+  background-color: #1E90FF;/*color*/
+  background-image:url('../images/bg4.png');
+}
+.tabela{
+  max-width:800px;
+}
+.tabela .registro{
+  float:left;
+  width:100%;
+  color:#9C9C9C;
+}
+
+.tabela .registro .campo{
+  float:left;
+  margin:2px;
+  border-bottom:2px solid #FFF;
+  
+}
+
+table{
+  width:100%;
+  border:0px;
+  margin:0px;
+  padding:0px;
+  border-left:0px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table{
+}
+table thead tr{
+  background-color:#1E90FF;
+  border:0px;
+  margin:0px;
+  padding:3px;
+  color:#FFF;
+
+}
+table tfoot tr{
+  background-color:#1E90FF;  
+}
+table tr{
+  box-sizing: border-box;
+  background:#FFFFFF;
+  height:30px;
+  width:100%;
+  font-size:16px;
+  padding:4px;
+  margin:0px;
+}
+table tfoot tr th{
+  text-align:right;
+}
+table thead tr th{
+  text-align:left;
+}
+
+table tbody tr:nth-child(even){
+  background-color:#F9F9F9;
+}
+table tbody tr td{
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pgButton{
+  height:16px;
+  font-color:#FFF;
+  min-width:16px;
+  float:left;
+  padding:3px;
+  margin:3px;
+  text-align:center;
+  font-weight: normal;
+  background-color: #1E90FF;/*color*/
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.pgButton:hover{
+  background-image:url('../images/bg4.png');
+  cursor:pointer;
+}
+
+.pgInfo{
+  height:16px;
+  float:left;
+  padding:3px;
+  margin:3px;
+  text-align:center;
+  font-weight: normal; 
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.paginationPanel{
+  float:right;
+}
+
+a:link {
+    text-decoration: underline;
+    color:#FFF;
+}
+
+a:visited {
+    text-decoration: none;
+    color:#FFF;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#FFF;
+}
+
+a:active {
+    text-decoration: none;
+    color:#FFF;
+}
