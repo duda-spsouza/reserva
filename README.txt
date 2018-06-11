@@ -9,3 +9,5 @@ git clone https://github.com/duda-spsouza/reserva.git
 ## Banco de Dados 
 dump\reserva_salas.sql
 
+## Usuário e senha
+admin/admin
